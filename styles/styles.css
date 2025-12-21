@@ -1,0 +1,692 @@
+/* Gblobal */
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter, Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --mainColor: hsl(201, 68%, 32%);
+    --mainColorDark: hsl(201, 68%, 20%);
+    --mainColorLight: hsl(201, 68%, 90%);
+    --secondaryColor: hsl(199, 43%, 47%);
+    --secondaryColorDark: hsl(199, 43%, 20%);
+    --accentColor: hsl(177, 93%, 38%);
+    --lightAccentColor: hsl(177, 93%, 90%);
+}
+
+h1, h3, p, a {
+    color: var(--mainColorDark);
+}
+
+
+a {
+    text-decoration: none;
+    color: var(--mainColorLight);
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+a:hover {
+    color: hsl(201, 68%, 95%); 
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  
+}
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: hsl(201, 68%, 95%); 
+  transform-origin: bottom center;
+  transition: transform 0.25s ease-out;
+}
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom center;
+}
+
+ul {
+    margin: 0 auto;
+    font-size: 1.5rem;
+}
+
+li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0.75rem 1rem;
+}
+
+img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+}
+
+/* Reusable */
+
+.h3--designed {
+    margin: 2rem 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+    text-shadow: 1px 1px 5px hsl(0, 0%, 70%);
+}
+
+.sectionNav {
+    width: 90%;
+    height: 2rem;
+    margin: auto;
+}
+
+.navFontColor {
+    color: var(--mainColorLight);
+}
+
+.nav__paddings {
+    padding: 0.5rem;
+}
+
+.grid {
+    display: grid;
+}
+
+@media  screen and (min-width: 768px) {
+    .grid--1x2 {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.imgBackShadow {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Reusable Color Schemes */
+
+.navColor {
+    background-color: var(--mainColorDark);
+}
+
+.textColor {
+    color: var(--mainColorDark);
+}
+
+.greenBlueBackground {
+    background-color: var(--lightAccentColor);
+    box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.1), 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 8px hsl(0, 0%, 90%);
+    
+}
+
+.lightBlueBackground {
+    background-color: var(--mainColorLight);
+    box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.1), 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 8px hsl(0, 0%, 90%);
+    
+}
+
+.darkBlueBackground {
+    background-color: hsl(199, 43%, 70%);
+    box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.1), 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 8px hsl(0, 0%, 90%);
+}
+
+.background__shadow {
+    box-shadow: 2px 2px 10px var(--mainColor);
+}
+
+
+/* TopNavBar */
+
+.topNav {
+    padding: 0 2rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (max-width: 420px) {
+
+    .heroImg {
+        width: 300px;
+    }
+}
+
+.phoneNumber {
+    margin-top: 0.3rem;
+    display: inline-block;
+}
+
+.phoneNumber::before {
+    content: "";
+    background-image: url(../assets/whatsapp-2.png);
+    display: inline-block;
+    background-size: 100%;
+    height: 1.5rem;
+    width: 1.5rem;
+    position: relative;
+    top: 0.3rem;
+    margin-right: 0.5rem;
+}
+
+.phoneNumber::after {
+    content: "|";
+    margin: 0 0.5rem;
+}
+
+.langSelect {
+    position: relative;
+    width: 2rem;
+    padding: 0.4rem 0;
+}
+
+.langSelect__menu {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 10px;
+
+    margin: 0.5rem 0;
+    padding: 0.3rem 0.3rem;
+
+    
+
+    text-align: center;
+
+    right: -20px;
+
+}
+
+.langSelect:hover .langSelect__menu {
+    display: block;
+}
+
+.langSelect_menuItems {
+    display: flex;
+    flex-direction: column;
+}
+
+.langSelect_menuItems>a {
+    color: red;
+    padding: 0.5rem 1rem;
+    min-width: 2rem;
+}
+
+.section__margin {
+    margin: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .section__margin {
+        margin: 2rem;
+    } 
+}
+
+/* Hero */
+
+.hero {
+    padding: 2rem;
+    background-color: hsl(201, 68%, 97%);
+}
+
+.heroText {
+    justify-self: center;
+    padding-top: 3rem;
+    font-size: 1.75rem;
+    margin-bottom: 2.5rem;
+}
+
+.heroText>p {
+    margin-bottom: 2.5rem;
+}
+
+.applyA {
+    font-weight: 400;
+    letter-spacing: 0.15rem;
+    padding: 1rem 3rem;
+    color: white;
+    background-color: var(--mainColor);
+    border-radius: 10px;
+    border: 1px solid var(--mainColor);
+}
+
+@media screen and (min-width: 1024px) {
+    .heroText {
+        align-content: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        padding: 2rem 0;
+    }
+
+    .heroText {
+        text-align: center;
+        
+    }
+
+    .heroImg {
+        justify-self: center;
+        object-fit: contain;
+    }
+}
+
+/* Main Nav Bar */
+
+.navUl {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+/* SECTIONS */
+
+/* About Me Section */
+
+.aboutMe {
+    background-image: url(../assets/polygon-background.svg);
+    background-color: rgba(255,255,255, 0.85);
+    background-blend-mode: lighten;
+}
+
+.aboutMe>div {
+    padding: 1rem;
+    align-content: center;
+}
+
+.aboutMe>div>img {
+    border-radius: 5px;
+}
+
+.aboutMe__textContainer>h3 {
+    text-align: center;
+}
+
+.aboutMe__textContainer>p {
+    max-width: 800px;
+    text-indent: 0.5rem;
+    padding: 0.5rem 0.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .aboutMe>div {
+        padding: 0;
+    }
+
+    .aboutMe__textContainer>p {
+        font-size: 0.875rem;
+        margin: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .aboutMe>div>p {
+        text-align: center;
+    }
+}
+
+/* My Approach Section */
+
+.myApproach {
+    padding: 0 3rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.myApproachCards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 2rem;
+    justify-items: center;
+}
+
+.card {
+    display: grid;
+    grid-template-rows: 50% 50%;
+
+    min-height: 250px;
+
+    min-width: 200px;
+    max-width: 350px;
+
+    
+
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 2px var(--mainColorLight);
+}
+
+
+.card>div {
+    align-content: center;
+}
+
+.card>div>img {
+    object-fit: contain;
+    height: 100%;
+}
+
+.card>div>p {
+    padding: 1rem;
+    color: white;
+    line-height: 2em;
+}
+
+.card>div:last-of-type {
+    border-radius: 0 0 15px 15px;
+    background-color: hsl(201, 68%, 35%);
+}
+
+@media screen and (max-width: 768px) {
+    .myApproachCards {
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 400px;
+        row-gap: 2rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card {
+        grid-template-rows: 60% 40%;
+    }
+
+    .cardOne {
+        grid-row: 1;
+    }
+
+       .cardTwo {
+        grid-row: 2;
+    }
+
+       .cardThree {
+        grid-row: 3;
+    }
+}
+
+/* Why Me Section */
+
+.whyMeMainContainer {
+    text-align: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.whyMeMainContainer>img {
+    border-radius: 1.5rem;
+    max-height: 600px;
+    object-fit: cover;
+    
+  
+}
+
+.whyMeMainContainer>div {
+    align-content: center;
+}
+
+.whyMe__li {
+   height: 60%;
+   align-content:center;
+   border: 1px solid hsl(0, 0%, 80%);
+   border-radius: 5%;
+   box-shadow: 2px 2px 8px hsl(0, 0%, 90%);
+   background-color: hsl(0, 0%, 99%);
+}
+
+.whyMe__li>li {
+    padding: 0.25rem;
+}
+
+@media screen and (max-width: 768px) {
+    .whyMeMainContainer {
+        gap: 0;
+    }
+
+    .whyMe__li {
+        height: 100%;
+    }
+
+    .whyMeMainContainer>img {
+        width: 55%;
+        transform: rotate(90deg);
+        box-shadow: 2px 2px 8px hsl(0, 0%, 90%);;
+        border: 1px solid hsl(0, 0%, 80%);
+    }
+
+    .upsideDownSmallScreensGrid {
+        grid-column-start: 1;
+        grid-row-start: 1;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .whyMe__li {
+        height: 80%;
+   }
+}
+
+@media screen and (max-width: 768px) {
+    .whyMeMainContainer>img {
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    .whyMe__li {
+        width: 80%;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .whyMe__li {
+        width: 60%;
+    }
+}
+
+
+
+/* Learning Process Section */
+
+.learningProcess {
+    margin: 0rem;
+    text-align: center;
+    background-image: linear-gradient(to bottom, white, hsl(201, 68%, 95%));
+}
+
+.learningProcess>p {
+    padding: 1rem 2rem;
+}
+
+.learningProcess>p:last-of-type {
+    font-weight: bold;
+}
+
+.learningProcess__pAccent {
+    font-weight: bold;
+}
+
+.lastPaccent {
+    color: var(--accentColor);
+}
+
+
+
+.learningProcess__aContainer {
+    padding: 1.5rem 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    background-color: var(--mainColor);
+}
+
+.learningProcess__aContainer>a {
+    color: white;
+}
+
+.learningProcess__aContainer>a:hover {
+    color: var(--lightAccentColor);
+    transition: color 0.2s;
+}
+
+.learningProcess__aContainer__span {
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 1080px) {
+    .learningProcess>p {
+       width: 80%;
+       margin: auto;
+    }
+}
+
+@media screen and (min-width: 1920px) { 
+    .learningProcess>p {
+        width: 50%;
+    }
+}
+
+/* Contact Me Section */
+.contactMeForm {
+    padding: 1rem;
+    padding-bottom: 4.5rem;
+    position: relative;
+    width: 80%;
+    margin: auto;
+
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 15px;
+
+}
+
+.contactMeSection>h3 {
+    text-align: center;
+}
+
+label {
+    display: block;
+    padding: 0.5rem;
+}
+
+input, textarea {
+    border-radius: 5px;
+    border: 1px solid var(--mainColor);
+    padding: 0.4rem;
+    margin: 0.5rem 0.7rem;
+    width: 95%;
+}
+
+textarea {
+    resize: none;
+}
+
+
+.contactMeForm>button {
+    margin: 1rem 0;
+    padding: 0.5rem 0.8rem;
+    width: 80%;
+    position: absolute;
+    left: 10%;
+    
+    
+    color: white;
+    background-color: var(--mainColor);
+    border-radius: 10px;
+    border: 1px solid var(--mainColor);
+
+}
+
+@media screen and (max-width: 768px) {
+    .contactMeForm {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .contactMeForm {
+       width: 60%;
+    }
+}
+
+/* @media screen and (min-width: 1920px) {
+    .contactMeForm {
+       width: 60%;
+    }
+} */
+
+/* Footer */
+
+.footerContainer {
+    background-color: var(--mainColorLight);
+
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+
+    text-align: center;
+}
+
+
+.footerAnchor {
+    color: black;
+    text-transform: lowercase;
+    text-decoration: underline;
+}
+
+.footerAnchor:hover {
+    color: var(--secondaryColor);
+}
+
+.footerWhatsUp {
+    text-decoration: underline;
+}
+
+.footerWhatsUp:hover {
+    color: var(--secondaryColor);
+}
+
+
+
+/* Index Buttons Test */
+
+.indexButtons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.indexButtons>a {
+    color: var(--mainColorDark);
+    background-color: var(--mainColorLight);
+
+    padding: 1rem 2rem;
+    margin: 2rem;
+
+    border-radius: 10px;
+    border: 1px solid var(--mainColor);
+}
+
+.indexButtons>a:hover {
+    background-color: hsl(201, 68%, 80%);
+}
+
+@media screen and (max-width: 768px) {
+    .indexButtons {
+        flex-direction: column;
+        width: 70%;
+        text-align: center;
+        margin: auto;
+    }
+}
