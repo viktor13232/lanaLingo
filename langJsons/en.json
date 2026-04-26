@@ -1,0 +1,63 @@
+{
+    "emailLang": "Email",
+    
+    "heroSection": {
+        "heroApply": "Apply",
+        "heroCredo": "Your Learning Journey"
+    },
+
+    "topNavSection": {
+        "topNavAboutMe": "About Me",
+        "topNavMyApproach": "My Approach",
+        "topNavWhyMe": "Why me?",
+        "topNavLearningProcess": "The learning process",
+        "topNavContactMe": "Contact Me"
+                    },
+    
+    "aboutMeSection": {
+        "aboutMeHi": "Hi!",
+        "aboutMeColumnOne": "I’m Lana, and I’m happy to guide students on their language and music learning journey. I’ve been teaching German, Latvian, and Russian for many years, along with the basics of music education — theory, solfeggio, and beginner piano.",
+        "aboutMeColumnTwo": "Over the years, I’ve had the pleasure of helping learners of all ages and backgrounds succeed, no matter their starting point. I believe that learning works best when it’s personalized — based on each student’s goals, interests, and learning style. Together, we find the tools and methods that make learning clear, engaging, and effective.",
+        "aboutMeColumnThree": "While I don’t hold a formal linguistics degree, my years of hands-on experience and deep understanding of the subjects I teach allow me to be a supportive and effective tutor. I use trusted teaching methods tailored to modern needs to make the process relevant and inspiring.",
+        "aboutMeColumnFour": "I earned my higher education in Germany, where I also taught Russian and music to German students. This experience deepened my appreciation for intercultural communication and personal connection in education."
+    },
+
+    "myApproachSection": {
+        "myApproachHeading": "My Approach",
+        "myApproachColumnOne": "A personlalized learning plan - from the first meeting to confident results",
+        "myApproachColumnTwo": "One-on-one lessons tailored to each student's level and goals"
+    },
+
+    "whyMeSection": {
+        "whyMeHeading": "Why me?",
+        "whyMeRowOne": "Individual approach to every student",
+        "whyMeRowTwo": "A variety of teaching materials, including my own custom resources",
+        "whyMeRowThree": "Patience, encouragement, and a respectful learning space",
+        "whyMeRowFour": "Lessons adapted to different goals: relocation, travel, work, studies",
+        "whyMeRowFive": "One tutor - for both languages and music"
+    },
+
+    "learningProcessSection" : {
+        "learningProcessHeading": "Learning process",
+        "learningProcessColumnOne": "I offer a convenient and effective format for remote (online) and in-person learning of music and foreign languages. Here's how we will move towards your goals:",
+        "learningProcessColumnTwo": "The first step – your application: Simply leave your request on this website, and I will definitely contact you as soon as possible.",
+        "learningProcessColumnThree": "The second step – our first meeting: During this meeting, we will discuss your goals, determine the frequency of our lessons, and agree on the necessary learning materials. We will also discuss the cost of our lessons at this meeting.",
+        "learningProcessColumnFour": "Preparing for the lesson – timely payment: To ensure our lesson goes as planned, payment for it must be made no later than 24 hours before the scheduled time. Please send confirmation of payment in advance.",
+        "learningProcessColumnFive": "See you at the lesson! After receiving confirmation of payment, our first lesson will take place.",
+        "learningProcessColumnSix": "Please note: If payment for the lesson is not received 24 hours before it begins, unfortunately, the lesson will be cancelled. This is necessary for me to manage my schedule and provide the best experience for all my students.",
+        "learningProcessBottomText": "Ready to take the first step? Leave your application right now!"
+    },
+
+    "contactMeSection": {
+        "contactMeHeader": "Contact me",
+        "contactMeNameLabel": "Name:",
+        "contactMeEmailLabel": "Email:",
+        "contactMeSubjectLabel": "Subject:",
+        "contactMeSubmitButton": "Submit",
+        "textAreaPlaceholder": "Write your message here"
+    },
+
+    "footerSection": {
+        "footerHeader": "Contact Details"
+    }
+}
