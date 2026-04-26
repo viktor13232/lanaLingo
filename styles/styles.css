@@ -11,11 +11,11 @@ body {
 :root {
     --mainColor: hsl(201, 68%, 32%);
     --mainColorDark: hsl(201, 68%, 20%);
-    --mainColorLight: hsl(201, 68%, 90%);
+    --mainColorLight: #d4ebf7;
     --secondaryColor: hsl(199, 43%, 47%);
     --secondaryColorDark: hsl(199, 43%, 20%);
     --accentColor: hsl(177, 93%, 38%);
-    --lightAccentColor: hsl(177, 93%, 90%);
+    --lightAccentColor: #cefdfb;
 }
 
 h1, h3, p, a {
@@ -84,6 +84,10 @@ img {
     font-weight: 600;
     letter-spacing: 0.05rem;
     text-shadow: 1px 1px 5px hsl(0, 0%, 70%);
+}
+
+.section__margin {
+    margin: 1rem;
 }
 
 .sectionNav {
@@ -195,6 +199,15 @@ img {
     padding: 0.4rem 0;
 }
 
+.langAImg {
+    border-radius: 5px;
+    
+
+    box-shadow: 2px -1px 107px 4px rgba(212,235,247,0.78);
+    -webkit-box-shadow: 2px -1px 107px 4px rgba(212,235,247,0.78);
+    -moz-box-shadow: 2px -1px 107px 4px rgba(212,235,247,0.78);
+}
+
 .langSelect__menu {
     display: none;
     position: absolute;
@@ -222,13 +235,6 @@ img {
     flex-direction: column;
 }
 
-/* Redundant */
-.langSelect_menuItems>a {
-    color: red;
-    padding: 0.5rem 1rem;
-    min-width: 2rem;
-}
-
 .langSelect_menuItems>button {
     padding: 0.5rem 1rem;
     min-width: 4rem;
@@ -239,14 +245,13 @@ img {
     background-color: transparent;
 }
 
-.langSelect_menuItems>a:hover, 
 .langSelect_menuItems>button:hover {
     background-color: rgba(0, 0, 0, 0.10);
     border-radius: 8px;
 }
 
-.section__margin {
-    margin: 1rem;
+.langBtnImg {
+    border-radius: 5px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -259,7 +264,9 @@ img {
 
 .hero {
     padding: 2rem;
-    background-color: hsl(201, 68%, 97%);
+    /* background-color: hsl(201, 68%, 97%); */
+    background-image: url("../assets/split_background-2.svg");
+    
 }
 
 .heroText {
@@ -455,6 +462,8 @@ img {
 
 .whyMeMainContainer>div {
     align-content: center;
+    border-bottom: 5px solid rgba(68, 139, 171, 0.6);
+    border-radius: 5px;
 }
 
 .whyMe__li {
