@@ -189,6 +189,7 @@ img {
 }
 
 .langSelect {
+    margin: 0 1rem;
     position: relative;
     width: 2rem;
     padding: 0.4rem 0;
@@ -221,10 +222,27 @@ img {
     flex-direction: column;
 }
 
+/* Redundant */
 .langSelect_menuItems>a {
     color: red;
     padding: 0.5rem 1rem;
     min-width: 2rem;
+}
+
+.langSelect_menuItems>button {
+    padding: 0.5rem 1rem;
+    min-width: 4rem;
+
+    border: 0;
+    object-fit: fill;
+
+    background-color: transparent;
+}
+
+.langSelect_menuItems>a:hover, 
+.langSelect_menuItems>button:hover {
+    background-color: rgba(0, 0, 0, 0.10);
+    border-radius: 8px;
 }
 
 .section__margin {
@@ -594,7 +612,6 @@ textarea {
     resize: none;
 }
 
-
 .contactMeForm>button {
     margin: 1rem 0;
     padding: 0.5rem 0.8rem;
@@ -622,11 +639,6 @@ textarea {
     }
 }
 
-/* @media screen and (min-width: 1920px) {
-    .contactMeForm {
-       width: 60%;
-    }
-} */
 
 /* Footer */
 
