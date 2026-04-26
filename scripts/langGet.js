@@ -4,26 +4,54 @@ const ruLangJSON = 'langJsons/ru.json';
 const lvLangJSON = 'langJsons/lv.json';
 const deLangJSON = 'langJsons/de.json';
 
-const lang = localStorage.getItem("language");
 
+    const enObj = {
+    name: "en",
+    imgLink: "assets/us.svg",
+    number: 1
+}
 
+const ruObj = {
+    name: "ru",
+    imgLink: "assets/ru.svg",
+    number: 2
+}
+const lvObj = {
+    name: "lv",
+    imgLink: "assets/lv.svg",
+    number: 3
+}
+const deObj = {
+    name: "de",
+    imgLink: "assets/de.svg",
+    number: 4
+}
+
+const langObjArr = [enObj, ruObj, lvObj, deObj];
+
+initDefaultLanguage();
 langChanger();
-
 
 //Reading language JSON, depending on selected or naviagator language
 
+function initDefaultLanguage() {
+    if(localStorage.getItem("language") === null)
+        localStorage.setItem("language", navigator.language);
+    console.log(localStorage.getItem("language"));
+}
+
 function langChanger() {
     
-    if(localStorage.getItem("language") === null)
-        lang = navigator.language;
+    // if(localStorage.getItem("language") === null)
+    //     localStorage.setItem("language", navigator.language);
     
-    if(lang.startsWith("en"))
+    if(localStorage.getItem("language").startsWith("en"))
         changeLanguage(enLangJSON);
-    else if(lang.startsWith("ru"))
+    else if(localStorage.getItem("language").startsWith("ru"))
         changeLanguage(ruLangJSON);
-    else if(lang.startsWith("de"))
+    else if(localStorage.getItem("language").startsWith("de"))
         changeLanguage(deLangJSON);
-    else if(lang.startsWith("lv"))
+    else if(localStorage.getItem("language").startsWith("lv"))
         changeLanguage(lvLangJSON);
     else {
         changeLanguage(enLangJSON);
@@ -52,29 +80,7 @@ async function getData(filePath) {
 
 //Assigning Icons and Event Listeners to Buttons and main language flag (which is Anchor)
 
-    const enObj = {
-    name: "en",
-    imgLink: "assets/us.svg",
-    number: 1
-}
 
-const ruObj = {
-    name: "ru",
-    imgLink: "assets/ru.svg",
-    number: 2
-}
-const lvObj = {
-    name: "lv",
-    imgLink: "assets/lv.svg",
-    number: 3
-}
-const deObj = {
-    name: "de",
-    imgLink: "assets/de.svg",
-    number: 4
-}
-
-const langObjArr = [enObj, ruObj, lvObj, deObj];
 
 changeIcons();
 
@@ -87,7 +93,7 @@ function changeIcons() {
     let counter = 0;
 
     for(let i = 0; i<4; i++) {
-        if(lang == langObjArr[i].name)
+        if(localStorage.getItem("language") == langObjArr[i].name)
             document.querySelector(".langAImg").src = langObjArr[i].imgLink;
         else {
             imgArr[counter].src = langObjArr[i].imgLink;
