@@ -5,7 +5,7 @@ const lvLangJSON = 'langJsons/lv.json';
 const deLangJSON = 'langJsons/de.json';
 
 
-    const enObj = {
+const enObj = {
     name: "en",
     imgLink: "assets/us.svg",
     number: 1
@@ -28,16 +28,19 @@ const deObj = {
 }
 
 const langObjArr = [enObj, ruObj, lvObj, deObj];
-
+//localStorage.removeItem("language");
 initDefaultLanguage();
 langChanger();
+
+changeIcons();
 
 //Reading language JSON, depending on selected or naviagator language
 
 function initDefaultLanguage() {
-    if(localStorage.getItem("language") === null)
+    if(localStorage.getItem("language") == undefined) {
         localStorage.setItem("language", navigator.language);
-    console.log(localStorage.getItem("language"));
+        location.reload();
+    }
 }
 
 function langChanger() {
@@ -82,18 +85,18 @@ async function getData(filePath) {
 
 
 
-changeIcons();
 
 
 
 function changeIcons() {
+    
     const btnArr = document.querySelectorAll(".langBtn");
     const imgArr = document.querySelectorAll(".langBtnImg");
 
     let counter = 0;
 
     for(let i = 0; i<4; i++) {
-        if(localStorage.getItem("language") == langObjArr[i].name)
+        if(localStorage.getItem("language").startsWith(langObjArr[i].name))
             document.querySelector(".langAImg").src = langObjArr[i].imgLink;
         else {
             imgArr[counter].src = langObjArr[i].imgLink;
